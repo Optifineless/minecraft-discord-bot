@@ -23,7 +23,7 @@ Users can also request more information using the `stats` command, for example t
 
 ## 🛠️ Installation
 
-* **Clone** the repository (`git clone https://github.com/Androz2091/minecraft-discord-bot`) or **download** it.
+* **Clone** the repository (`git clone https://github.com/Optifineless/minecraft-discord-bot`) or **download** it.
 * Install Node.js and NPM if they are not installed.
 * Open your terminal and run `npm install` to install all the dependencies.
 * [Fill the config file](#fill-the-config-file).
@@ -32,7 +32,7 @@ Users can also request more information using the `stats` command, for example t
   
 #### Fill the config file
 
-You will have to fill the `config.json` file to make the bot working (rename the `config.sample.json` file to `config.json`). Here are some informations about the config file fields:
+You will have to fill the `config.json` file to make the bot working (review the `config.sample.json` to get an idea on what you have to change). Here are some informations about the config file fields:
 
 * `token` Your Discord bot token.
 * `ipAddress`: The IP address of the server you want to track statistics. For example, can be `mc.hypixel.net` for Hypixel.
