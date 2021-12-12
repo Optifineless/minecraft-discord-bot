@@ -1,12 +1,18 @@
 {
 
     "token": "your discord bot token",
-
+    // Replace your discord bot token with your bot's token
     "ipAddress": "mc.hypixel.net",
-    "port": "optional - the port of your minecraft server",
-    "playersChannel": "9802980280282",
-    "statusChannel": "3809390383",
+    // Replace the mc.hypixel.net with your server IP address (without port)
+    "port": "25565",
+    // The default port of a minecraft server is 25565 , if your server connects using a different port, then replace the 25565 with your desired port.
+    "playersChannel": "vcid",
+    // Copy the ID of the Voice Channel for player count and replace it with vcid
+    "statusChannel": "vcid",
+    // Copt the ID of the Voice Channel for player count and replace it with vcid
     "updateInterval": "11min",
+    // Set the UpdateInterval, due to discord's API updates the minimum update interval is 10min.
 
     "prefix": "!"
+    // Set your desired prefix by replacing the !
 }
