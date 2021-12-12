@@ -1,0 +1,12 @@
+{
+
+    "token": "your discord bot token",
+
+    "ipAddress": "mc.hypixel.net",
+    "port": "25565",
+    "playersChannel": "919490156136919091",
+    "statusChannel": "919490391420596234",
+    "updateInterval": "10min",
+
+    "prefix": "!"
+}
