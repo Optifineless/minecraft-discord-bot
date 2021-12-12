@@ -13,7 +13,7 @@ const updateChannel = async () => {
     // Fetch statistics from mcapi.us
     const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}`)
     if (!res) {
-        const statusChannelName = `【🛡】Status: Offline`
+        const statusChannelName = `【❎】Status: Offline`
         client.channels.cache.get(config.statusChannel).setName(statusChannelName)
         return false
     }
@@ -28,7 +28,7 @@ const updateChannel = async () => {
 
     // Generate channel names
     const playersChannelName = `【👥】Players: ${players}`
-    const statusChannelName = `【🛡】Status: ${status}`
+    const statusChannelName = `【✅】Status: ${status}`
 
     // Update channel names
     client.channels.cache.get(config.playersChannel).setName(playersChannelName)
@@ -64,18 +64,16 @@ client.on('message', async (message) => {
         // Parse the mcapi.us response
         const body = await res.json()
 
-        const attachment = new Discord.MessageAttachment(Buffer.from(body.favicon.substr('data:image/png;base64,'.length), 'base64'), "icon.png")
-
         const embed = new Discord.MessageEmbed()
             .setAuthor(config.ipAddress)
-            .attachFiles(attachment)
-            .setThumbnail("attachment://icon.png")
+            .setThumbnail("https://cdn.discordapp.com/attachments/917802035628347472/919493846256189440/murughi-removebg-preview.png")
+         // Set the thumbnail by changing the image link above ^
             .addField("Version", body.server.name)
             .addField("Connected", `${body.players.now} players`)
             .addField("Maximum", `${body.players.max} players`)
             .addField("Status", (body.online ? "Online" : "Offline"))
             .setColor("#FF0000")
-            .setFooter("Open Source Minecraft Discord Bot")
+            .setFooter("Open Source Discord Bot 4 lyfe")
         
         sentMessage.edit(`:chart_with_upwards_trend: Here are the stats for **${config.ipAddress}**:`, { embed })
     }
