@@ -41,3 +41,6 @@ You will have to fill the `config.json` file to make the bot working (review the
 * `statusChannel`: The Discord ID of the voice channel that will show the status of your server.
 * `updateInterval`: The interval for the voice channel update. **Due to a recent update of Discord, the interval must be greater than 10 minutes**
 * `prefix`: the prefix of the bot for text commands.
+
+#### Credits:
+This is a forked version of `Androz2091/minecraft-discord-bot` project. I just fixed the error in the !stats command, that's all.
